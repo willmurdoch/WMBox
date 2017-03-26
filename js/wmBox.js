@@ -13,7 +13,9 @@
 		});
 		$('.wmBox_overlay').click(function(e){
 			e.preventDefault();
-			$('.wmBox_overlay').fadeOut(750);
+			$('.wmBox_overlay').fadeOut(750, function(){
+				$(this).find('iframe').remove();
+			});
 		});
 	});
 }(jQuery));
